@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+public class GuardarResultado {
+    private ArrayList<String> datos;
+
+    public GuardarResultado() {
+        datos = new ArrayList<>();
+    }
+
+    public void agregarDato(String dato) {
+        datos.add(dato);
+        System.out.println("Dato guardado: " + dato);
+    }
+}
+ 
