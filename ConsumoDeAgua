@@ -1,0 +1,31 @@
+public class ConsumoDeAgua {
+    private String ConsumoMes;
+    private GuardarResultado guardarResultado;
+
+    public ConsumoDeAgua(GuardarResultado guardarResultado) {
+        this.guardarResultado = guardarResultado;
+    }
+
+    public void IngresarConsumo(int consumo, String periodicidad) {
+        switch (periodicidad.toLowerCase()) {
+            case "diario":
+                ConsumoMes = "Diario";
+                break;
+            case "semanal":
+                ConsumoMes = "Semanal";
+                break;
+            case "mensual":
+                ConsumoMes = "Mensual";
+                break;
+            default:
+                System.out.println("Periodicidad inválida.");
+                return;
+        }
+
+        System.out.println("Consumo de agua ingresado correctamente (" + periodicidad + "): " + consumo + " litros.");
+    }
+
+    public void HacerRecomendaciones() {
+      
+    }
+}
