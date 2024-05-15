@@ -12,7 +12,7 @@ public class Recomendaciones {
             Recomendacion1 = "Reducir el tiempo de la ducha para ahorrar agua.";
         }
         if (consumo > 2000) {
-            Recomendacion2 = "Reparar cualquier fuga de agua en grifos o tuberías.";
+            Recomendacion2 = "Revisar fugas de agua en grifos o tuberías.";
         }
         if (consumo > 3000) {
             Recomendacion3 = "Utilizar dispositivos de bajo flujo en los grifos y la ducha.";
