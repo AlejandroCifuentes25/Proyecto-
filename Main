@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el consumo de agua:");
+        int consumo = scanner.nextInt();
+
+        System.out.println("Seleccione la periodicidad del consumo (diario/semanal/mensual):");
+        String periodicidad = scanner.next();
+
+        ConsumoDeAgua consumoDeAgua = new ConsumoDeAgua(new GuardarResultado());
+        consumoDeAgua.IngresarConsumo(consumo, periodicidad);
+
+        Recomendaciones recomendaciones = new Recomendaciones();
+        recomendaciones.CompararConPromedio(consumo);
+
+       
+        if (consumo < 1000) {
+            System.out.println("El consumo de agua está bajo.");
+        } else {
+            System.out.println("El consumo de agua está alto.");
+        }
+
+       
+        System.out.println("Recomendaciones:");
+        if (recomendaciones.getRecomendacion1() != null) {
+            System.out.println(recomendaciones.getRecomendacion1());
+        }
+        if (recomendaciones.getRecomendacion2() != null) {
+            System.out.println(recomendaciones.getRecomendacion2());
+        }
+        if (recomendaciones.getRecomendacion3() != null) {
+            System.out.println(recomendaciones.getRecomendacion3());
+        }
+
+        scanner.close();
+    }
+}
