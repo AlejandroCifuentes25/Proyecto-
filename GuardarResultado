@@ -1,0 +1,9 @@
+import java.util.ArrayList;
+
+public class GuardarResultado {
+    private ArrayList<String> datos = new ArrayList<>();
+
+    public void AgregarDatos(String dato) {
+        datos.add(dato);
+    }
+}
