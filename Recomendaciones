@@ -1,0 +1,45 @@
+public class Recomendaciones {
+    private String Recomendacion1;
+    private String Recomendacion2;
+    private String Recomendacion3;
+    private String Recomendacion4;
+
+    public Recomendaciones() {
+
+    }
+
+    public void CompararConPromedio(int consumo) {
+        if (consumo < 1000) {
+            Recomendacion1 = "No hay novedades, anomalías, ni recomendaciones, sigue así.";
+        }
+        if (consumo > 1000) {
+            Recomendacion2 = "Reducir el tiempo de la ducha para ahorrar agua.";
+        }
+        if (consumo > 2000) {
+            Recomendacion3 = "Revisar fugas de agua en grifos o tuberías.";
+        }
+        if (consumo > 3000) {
+            Recomendacion4 = "!REVISA POSIBLE ANOMALÍA! Utiliza dispositivos de bajo flujo en los grifos y la ducha.";
+        }
+    }
+
+    public boolean esConsumoAlto(int consumo) {
+        return consumo > 1000;
+    }
+
+    public String getRecomendacion1() {
+        return Recomendacion1;
+    }
+
+    public String getRecomendacion2() {
+        return Recomendacion2;
+    }
+
+    public String getRecomendacion3() {
+        return Recomendacion3;
+    }
+
+    public String getRecomendacion4() {
+        return Recomendacion4;
+    }
+}
